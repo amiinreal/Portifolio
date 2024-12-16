@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+
 /.pnp
 .pnp.js
 
@@ -36,3 +37,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env
+node_modules/@babel/runtime/helpers/AwaitValue.js
