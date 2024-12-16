@@ -2,6 +2,8 @@ import { getRepositories, type Repository } from "@/lib/github"
 import { getProjects } from "@/lib/api/projects"
 import { ProjectCard } from "@/components/project-card"
 import { FigmaProjects } from "@/components/sections/figma-projects"
+import type { Project } from "@/types/project"
+import React from "react"
 
 export async function Projects() {
   const [repositories, projects] = await Promise.all([
@@ -23,7 +25,7 @@ export async function Projects() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Display custom projects first */}
-        {projects.map((project) => (
+        {projects.map((project: Project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
         {/* Then display GitHub repositories */}
